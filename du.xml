@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="gb" fetch="https://github.com/" />
+  <remote name="bb" fetch="https://bitbucket.org/" />
+  <remote name="gl" fetch="https://gitlab.com/" />	   
+  <remote name="linaro" fetch="git://android.git.linaro.org/" review="review.android.git.linaro.org" />
+
+  <!--Repos to remove-->
+  <remove-project name="android_build" />
+  <remove-project name="android_build_soong" />
+  <remove-project name="android_frameworks_base" />
+  <remove-project name="android_frameworks_av" />
+  <remove-project name="android_frameworks_native" />
+  <remove-project name="android_vendor_du" />
+  <remove-project name="android_system_core" />
+  <remove-project name="android_vendor_extras" />
+  <remove-project name="android_system_sepolicy" />
+  <remove-project name="android_system_libhidl" />
+  <remove-project name="android_hardware_ril" />
+  <remove-project name="android_hardware_qcom_media" />
+  <remove-project name="android_hardware_qcom_audio" />
+  <remove-project name="android_hardware_qcom_display" />
+  <remove-project name="android_hardware_qcom_bt" />
+  <remove-project name="android_hardware_qcom_wlan" />
+  <remove-project name="android_hardware_qcom_power" />
+  <remove-project name="android_hardware_qcom_gps" />
+  <remove-project name="android_device_qcom_sepolicy" />
+  <remove-project name="android_packages_apps_DU-Tweaks" />
+  <remove-project name="android_packages_apps_Settings" />
+  <remove-project name="android_packages_apps_Dialer" />
+  <remove-project name="platform/external/proguard" />
+  <remove-project name="platform/prebuilts/jdk/jdk8" />
+  <remove-project name="android_packages_services_Telecomm" />
+  <remove-project name="platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" />
+
+  <!--DU_Project repos-->
+  <project name="dirtyunicorns-project/android_build_make" path="build/make" remote="gb" revision="o8x" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project name="dirtyunicorns-project/android_build_soong" path="build/soong" remote="gb" revision="o8x" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+  <project name="dirtyunicorns-project/android_device_xiaomi_gemini" path="device/xiaomi/gemini" remote="gb" revision="8.1-eas" />
+  <project name="dirtyunicorns-project/android_vendor_du" path="vendor/du" remote="gb" revision="o8x" />
+  <project name="dirtyunicorns-project/android_system_core" path="system/core" remote="gb" revision="o8x-caf" />
+  <project name="dirtyunicorns-project/android_vendor_extras" path="vendor/extras" remote="gb" revision="o8x" />
+  <project name="dirtyunicorns-project/android_hardware_ril" path="hardware/ril-caf" remote="gb" revision="o8x-caf" />
+  <project name="dirtyunicorns-project/android_system_libhidl" path="system/libhidl" remote="gb" revision="o8x-caf" />
+  <project name="dirtyunicorns-project/android_system_sepolicy" path="system/sepolicy" remote="gb" revision="o8x" />
+  <project name="dirtyunicorns-project/android_packages_apps_Settings" path="packages/apps/Settings" remote="gb" revision="o8x" />
+  <project name="dirtyunicorns-project/android_packages_services_Telecomm" path="packages/services/Telecomm" remote="gb" revision="o8x-caf" />
+  <project name="dirtyunicorns-project/android_frameworks_base" path="frameworks/base" remote="gb" revision="o8x" />
+  <project name="dirtyunicorns-project/android_frameworks_native" path="frameworks/native" remote="gb" revision="o8x" />
+  <project name="dirtyunicorns-project/android_packages_apps_DU-Tweaks" path="packages/apps/DU-Tweaks" remote="gb" revision="o8x" />
+  <project name="dirtyunicorns-project/platform_device_aosp_sepolicy" path="device/aosp/sepolicy" remote="gb" revision="8.1" />
+  
+  <!--AOSP repos-->
+  <project name="platform/packages/apps/Calendar" path="packages/apps/Calendar" groups="pdk-fs" />
+  <project name="platform/prebuilts/jdk/jdk9" path="prebuilts/jdk/jdk9" remote="aosp" revision="master" clone-depth="1" />
+  
+  <!--AEX repos-->
+  <project name="Denny_SPB/proprietary_vendor_xiaomi" path="vendor/xiaomi" remote="gl" revision="eas" />
+  <project name="aexmod-tmp/platform_kernel_xiaomi_msm8996" path="kernel/xiaomi/msm8996" remote="gb" revision="eas-oreo" />
+  <project name="AEXmod/platform_frameworks_av" path="frameworks/av" remote="gb" revision="8.1" />
+  <project name="AEXmod/android_device_qcom_sepolicy" path="device/qcom/sepolicy" remote="gb" revision="8.1" />
+  <project name="AEXmod/platform_packages_apps_Spectrum" path="packages/apps/Spectrum" remote="gb" revision="mod" />
+  
+  <!--LineageOS repos-->
+  <project name="LineageOS/android_packages_resources_devicesettings" path="packages/resources/devicesettings" remote="gb" revision="lineage-15.1" />
+  <project name="LineageOS/android_external_ant-wireless_ant_service" path="external/ant-wireless/ant_service" remote="gb" revision="lineage-15.1" />
+  <project name="LineageOS/android_external_ant-wireless_antradio-library" path="external/ant-wireless/antradio-library" remote="gb" revision="lineage-15.1" />
+  <project name="LineageOS/android_external_ant-wireless_ant_native" path="external/ant-wireless/ant_native" remote="gb" revision="lineage-15.1" />
+  
+  <!--BenzoROM repos-->
+  <project name="BenzoRom/external_proguard" path="external/proguard" remote="gb" revision="eightone" />
+  
+  <!--HALs-->
+  <project name="AEXmod/hardware_qcom_media" path="hardware/qcom/media-caf/msm8996" remote="gb" revision="8.1-caf-8996" />
+  <project name="AEXmod/hardware_qcom_audio" path="hardware/qcom/audio-caf/msm8996" remote="gb" revision="8.1-caf-8996" />
+  <project name="AEXmod/hardware_qcom_display" path="hardware/qcom/display-caf/msm8996" remote="gb" revision="8.1-caf-8996" />
+  <project name="AEXmod/platform_hardware_qcom_power" path="hardware/qcom/power" remote="gb" revision="8.1" />
+  <project name="LineageOS/android_hardware_qcom_bt" path="hardware/qcom/bt" remote="gb" revision="lineage-15.1-caf" />
+  <project name="LineageOS/android_hardware_qcom_gps" path="hardware/qcom/gps" remote="gb" revision="lineage-15.1" />
+  <project name="AEXmod/platform_hardware_qcom_wlan" path="hardware/qcom/wlan" remote="gb" revision="8.1" />
+  <project name="AEXmod/platform_hardware_qcom_wlan" path="hardware/qcom/wlan-caf" remote="gb" revision="8.1-caf" />
+  <project name="LineageOS/android_hardware_qcom_neuralnetworks_hvxservice" path="hardware/qcom/neuralnetworks/hvxservice" remote="gb" revision="lineage-15.1" >
+    <copyfile dest="hardware/qcom/Android.bp" src="Android.bp"/>
+  </project>
+
+  <!--Toolchains-->
+  <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" remote="linaro" revision="master" />
+  <project name="AEXmod/platform_prebuilts_kernel-tc" path="prebuilts/gcc/linux-x86/aarch64" remote="gb" revision="gcc-8.x" /> 
+  <project name="dirtyunicorns-project/aarch64-linux-android-7.x" path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-7.x" remote="gb" revision="master" />
+
+</manifest>
