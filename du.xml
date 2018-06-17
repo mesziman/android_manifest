@@ -58,6 +58,7 @@
   <project name="dirtyunicorns-project/android_packages_apps_Settings" path="packages/apps/Settings" remote="gb" revision="o8x" />
   <project name="dirtyunicorns-project/android_packages_services_Telecomm" path="packages/services/Telecomm" remote="gb" revision="o8x-caf" />
   <project name="dirtyunicorns-project/android_frameworks_base" path="frameworks/base" remote="gb" revision="o8x" />
+  <project name="dirtyunicorns-project/platform_frameworks_av" path="frameworks/av" remote="gb" revision="8.1" />
   <project name="dirtyunicorns-project/android_frameworks_native" path="frameworks/native" remote="gb" revision="o8x" />
   <project name="dirtyunicorns-project/android_packages_apps_DU-Tweaks" path="packages/apps/DU-Tweaks" remote="gb" revision="o8x" />
   <project name="dirtyunicorns-project/platform_device_aosp_sepolicy" path="device/aosp/sepolicy" remote="gb" revision="8.1" />
@@ -68,7 +69,6 @@
   
   <!--AEX repos-->
   <project name="aexmod-tmp/platform_kernel_xiaomi_msm8996" path="kernel/xiaomi/msm8996" remote="gb" revision="eas-oreo" />
-  <project name="AEXmod/platform_frameworks_av" path="frameworks/av" remote="gb" revision="8.1" />
   <project name="AEXmod/android_device_qcom_sepolicy" path="device/qcom/sepolicy" remote="gb" revision="8.1" />
   <project name="AEXmod/platform_packages_apps_Spectrum" path="packages/apps/Spectrum" remote="gb" revision="mod" />
   
