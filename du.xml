@@ -47,7 +47,7 @@
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
-  <project name="dirtyunicorns-project/vendor_xiaomi" path="vendor/xiaomi" remote="gb" revision="eas" />
+  <project name="mesziman/vendor_xiaomi" path="vendor/xiaomi" remote="gb" revision="eas" />
   <project name="mesziman/android_device_xiaomi_capri" path="device/xiaomi/capricorn" remote="gb" revision="8.1-eas" />
   <project name="dirtyunicorns-project/android_vendor_du" path="vendor/du" remote="gb" revision="o8x" />
   <project name="dirtyunicorns-project/android_system_core" path="system/core" remote="gb" revision="o8x-caf" />
